@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const PersonDetail = () => {
     const {state} = useLocation();
-    const {id, name, email} = state.person;
+    const {id, firstName, lastName, company, email} = state.person;
     // const {id, name, email} = {"id":"1","name":"Tom Cruise","email":"hi@hi.com"};
 
     return (
@@ -14,8 +14,9 @@ const PersonDetail = () => {
                     <img src={personDetailImg} alt="Person Detail" />
                 </div>
                 <div className="content">
-                    <div className="header">{name}</div>
+                    <div className="header">{firstName} {lastName}</div>
                     <div className="description">{email}</div>
+                    <div className="description">{company}</div>
                 </div>
             </div>
             <div className="center-div">
